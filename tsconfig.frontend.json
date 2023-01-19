@@ -5,7 +5,7 @@
 
     "module": "commonjs",
 
-    "outDir": "./dist",
+    "outDir": "./frontend/assets/js",
 
     "esModuleInterop": true,
 
