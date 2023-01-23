@@ -7,11 +7,11 @@ export class Person {
     public _age: number,
   ) {}
 
-  static createPerson() {
+  static createPerson(): Person {
     return new Person('Luan', 'Brito', 0);
   }
 
-  showStaticProperties() {
+  showStaticProperties(): void {
     console.log(Person.completeName);
   }
 }
