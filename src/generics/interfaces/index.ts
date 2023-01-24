@@ -22,14 +22,17 @@ interface ICallbackFn<U> {
   (value: U, index?: number, array?: U[]): U;
 }
 
-function map<T>(arr: T[], callbackFn: ICallbackFn<T>) {
+function map<T>(arr: T[], callbackFn: ICallbackFn<T>): T[] {
   const newArray: T[] = [];
 
   for (let i = 0; i < arr.length; i++) {
     newArray.push(callbackFn(arr[i]));
   }
+
+  return newArray;
 }
 
 const strArr = ['a', 'b', 'c', 'd'];
 
-map(strArr, (value) => value.toUpperCase());
+const newStrArr = map(strArr, (value) => value.toUpperCase());
+console.log(newStrArr);
